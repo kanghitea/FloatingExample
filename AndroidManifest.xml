@@ -27,6 +27,7 @@
         </activity>
         <service
             android:name="tk.eatheat.floatingexample.FlyBitch"
+            android:configChanges="orientation"
             android:exported="true" />		
     </application>
 
