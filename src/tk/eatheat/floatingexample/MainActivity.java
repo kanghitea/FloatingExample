@@ -1,10 +1,8 @@
 package tk.eatheat.floatingexample;
 
-import tk.eatheat.floatingexample.R;
-import tk.eatheat.floatingexample.FlyBitch;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -16,11 +14,11 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		Bundle bundle = getIntent().getExtras();
+//		Bundle bundle = getIntent().getExtras();
 
-		if(bundle != null && bundle.getString("LAUNCH").equals("YES")) {
-			startService(new Intent(MainActivity.this, FlyBitch.class));
-		}
+//		if(bundle != null && bundle.getString("LAUNCH").equals("YES")) {
+//			startService(new Intent(MainActivity.this, FlyBitch.class));
+//		}
 
 		Button launch = (Button)findViewById(R.id.button1);
 		launch.setOnClickListener(new OnClickListener() {
@@ -44,11 +42,11 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onResume() {
-		Bundle bundle = getIntent().getExtras();
-
-		if(bundle != null && bundle.getString("LAUNCH").equals("YES")) {
-			startService(new Intent(MainActivity.this, FlyBitch.class));
-		}
+//		Bundle bundle = getIntent().getExtras();
+//
+//		if(bundle != null && bundle.getString("LAUNCH").equals("YES")) {
+//			startService(new Intent(MainActivity.this, FlyBitch.class));
+//		}
 		super.onResume();
 	}
 }
